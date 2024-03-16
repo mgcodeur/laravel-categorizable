@@ -8,12 +8,18 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('migration_table_name_table', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
-
+            $table->string('name');
+            $table->string('slug')->unique();
+            $table->string('parent_id')->nullable();
             // add fields
-
             $table->timestamps();
         });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('categories');
     }
 };
