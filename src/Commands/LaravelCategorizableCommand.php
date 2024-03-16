@@ -16,6 +16,7 @@ class LaravelCategorizableCommand extends Command
         $this->warn('Publishing categorizable migrations...');
         Artisan::call('vendor:publish --tag=categorizable-migrations');
         $this->info('Categorizable migrations published.');
+
         return self::SUCCESS;
     }
 }

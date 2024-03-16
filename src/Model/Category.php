@@ -9,7 +9,6 @@ class Category extends Model
 {
     protected $guarded = [];
 
-
     public function setSlugAttribute($value)
     {
         $this->attributes['slug'] = Str::slug($this->name);

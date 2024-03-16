@@ -5,7 +5,6 @@ namespace Mgcodeur\LaravelCategorizable\Requests;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
-use Illuminate\Support\Facades\Http;
 
 class CategoryRequest extends FormRequest
 {
@@ -13,7 +12,7 @@ class CategoryRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'parent_id' => 'nullable|exists:categories,id'
+            'parent_id' => 'nullable|exists:categories,id',
         ];
     }
 
