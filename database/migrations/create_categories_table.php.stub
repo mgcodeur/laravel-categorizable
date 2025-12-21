@@ -1,0 +1,48 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up()
+    {
+        Schema::create(config('model-category.table.categories', 'categories'), function (Blueprint $table) {
+            $tableName = config('model-category.table.categories', 'categories');
+            $keyType = config('model-category.key_type', 'id');
+
+            if ($keyType === 'uuid') {
+                $table->uuid('id');
+            } else {
+                $table->id();
+            }
+
+            $table->string('name');
+            $table->string('slug')->unique();
+            $table->text('description')->nullable();
+
+            if ($keyType === 'uuid') {
+                $table->primary('id');
+                $table->foreignUuid('parent_id')
+                    ->nullable()
+                    ->constrained($tableName, 'id')
+                    ->onDelete('cascade');
+            } else {
+                $table->foreignId('parent_id')
+                    ->nullable()
+                    ->constrained($tableName, 'id')
+                    ->onDelete('cascade');
+            }
+
+            $table->integer('order')->nullable();
+
+            $table->timestamps();
+        });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists(config('model-category.table', 'categories'));
+    }
+};

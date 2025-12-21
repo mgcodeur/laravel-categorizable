@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "mgcodeur/laravel-categorizable",
+    "description": "Laravel Categorizable is a lightweight package that makes it easy to manage categories and subcategories on your Eloquent models.",
     "keywords": [
-        ":vendor_name",
+        "mgcodeur",
         "laravel",
-        ":package_slug"
+        "laravel-categorizable"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/mgcodeur/laravel-categorizable",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "mgcodeur",
+            "email": "mgcodeur@gmail.com",
             "role": "Developer"
         }
     ],
@@ -35,13 +35,16 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
-        }
+            "Mgcodeur\\LaravelCategorizable\\": "src/",
+            "Mgcodeur\\LaravelCategorizable\\Database\\Factories\\": "database/factories/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/",
+            "Mgcodeur\\LaravelCategorizable\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -63,10 +66,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Mgcodeur\\LaravelCategorizable\\LaravelCategorizableServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "LaravelCategorizable": "Mgcodeur\\LaravelCategorizable\\Facades\\LaravelCategorizable"
             }
         }
     },
