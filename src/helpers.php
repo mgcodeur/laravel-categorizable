@@ -2,14 +2,12 @@
 
 namespace Mgcodeur\LaravelCategorizable;
 
-use Mgcodeur\LaravelCategorizable\Models\Category;
 use Mgcodeur\LaravelCategorizable\Builders\CategoryBuilder;
+use Mgcodeur\LaravelCategorizable\Models\Category;
 
-if (!function_exists('getCategorizableModel')) {
+if (! function_exists('getCategorizableModel')) {
     /**
      * Get the categorizable model class from the configuration.
-     *
-     * @return string
      */
     function getCategorizableModel(): string
     {
@@ -19,11 +17,9 @@ if (!function_exists('getCategorizableModel')) {
     }
 }
 
-if (!function_exists('getMorphKeyName')) {
+if (! function_exists('getMorphKeyName')) {
     /**
      * Get the morph key name from the configuration.
-     *
-     * @return string
      */
     function getMorphKeyName(): string
     {
@@ -33,11 +29,9 @@ if (!function_exists('getMorphKeyName')) {
     }
 }
 
-if (!function_exists('getBuilderClass')) {
+if (! function_exists('getBuilderClass')) {
     /**
      * Get the builder class from the configuration.
-     *
-     * @return string
      */
     function getBuilderClass(): string
     {

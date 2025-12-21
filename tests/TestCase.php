@@ -3,8 +3,8 @@
 namespace Mgcodeur\LaravelCategorizable\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use Mgcodeur\LaravelCategorizable\LaravelCategorizableServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {

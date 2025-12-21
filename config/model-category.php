@@ -18,7 +18,7 @@ return [
 
     /*
      * The primary key type of the category model.
-     * 
+     *
      * Available options: 'id', 'uuid'
      */
     'key_type' => 'id',
@@ -30,7 +30,7 @@ return [
 
     /*
      * The class name of the custom category builder.
-     * 
+     *
      * The builder must be or extend `Mgcodeur\LaravelCategorizable\Builders\CategoryBuilder::class`.
      */
     'builder_class' => Mgcodeur\LaravelCategorizable\Builders\CategoryBuilder::class,

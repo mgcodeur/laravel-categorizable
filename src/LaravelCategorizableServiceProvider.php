@@ -2,9 +2,9 @@
 
 namespace Mgcodeur\LaravelCategorizable;
 
+use Mgcodeur\LaravelCategorizable\Commands\LaravelCategorizableCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Mgcodeur\LaravelCategorizable\Commands\LaravelCategorizableCommand;
 
 class LaravelCategorizableServiceProvider extends PackageServiceProvider
 {

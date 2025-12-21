@@ -8,6 +8,6 @@ class CategoryBuilder extends Builder
 {
     public function addCategory(string $category)
     {
-        //TODO: 
+        // TODO:
     }
 }
